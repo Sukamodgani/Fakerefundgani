@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="Loginsite.css">
+
+</head>
+
+<body>
+
+<div class="login-box">
+  <h2>Login</h2>
+
+  <input type="password" id="password" placeholder="Enter password">
+
+  <button onclick="checkPassword()">Login</button>
+
+  <div id="error"></div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDbacglQqfeYrzeOxKHx54TN-rCGySmfU8",
+  authDomain: "logger-e079d.firebaseapp.com",
+  projectId: "logger-e079d",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// 🔥 THIS FIXES EVERYTHING
+window.db = db;
+window.addDoc = addDoc;
+window.collection = collection;
+
+console.log("🔥 Firebase READY");
+
+// 🔥 (optional) page visit log
+async function logVisit() {
+  await addDoc(collection(db, "logs"), {
+    type: "Page Visit",
+    page: "login.html",
+    time: new Date().toLocaleString()
+  });
+}
+logVisit();
+</script>
+
+<script src="Loginsite.js"></script>
+
+</body>
+</html>
