@@ -9,7 +9,7 @@ async function checkPassword() {
     return;
   }
 
-  let status = (input === "1234") ? "Correct" : "Wrong";
+  let status = (input === "Sukamod123") ? "Correct" : "Wrong";
 
   try {
     await window.addDoc(window.collection(window.db, "logs"), {
