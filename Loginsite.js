@@ -25,7 +25,7 @@ async function checkPassword() {
     setTimeout(() => {
  if (status === "Correct") {
     localStorage.setItem("loggedIn", "true"); // ✅ ADD THIS LINE HERE
-    window.location.href = "http://127.0.0.1:5501/fakerefund.html"; // change this
+    window.location.href = "https://fakerefundgani.vercel.app/fakerefund.html"; // change this
  } else {
     window.location.href = "https://examplesite2026.vercel.app/Trollface.html";
  }
