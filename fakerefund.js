@@ -1,7 +1,3 @@
-// 🔐 PROTECT THIS PAGE
-if (localStorage.getItem("loggedIn") !== "true") {
-  window.location.href = "https://fakerefundgani.vercel.app/Loginsite.html"; // change this
-}
 let attempt = 0;
 let completedRun = false;
 
