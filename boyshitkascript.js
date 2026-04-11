@@ -94,10 +94,10 @@ recoveryText.innerHTML =
 
 /* UNLOCK ACCOUNT */
 
-document.getElementById("communityBan").innerHTML = "No";
-document.getElementById("tradeBan").innerHTML = "No";
-document.getElementById("vacBan").innerHTML = "No";
-document.getElementById("accountStatus").innerHTML = "ACTIVE";
+document.getElementById("communityBan").innerHTML = "Pending";
+document.getElementById("tradeBan").innerHTML = "Pending";
+document.getElementById("vacBan").innerHTML = "Pending";
+document.getElementById("accountStatus").innerHTML = "Pending";
 
 document.getElementById("communityBan").className = "ban-green";
 document.getElementById("tradeBan").className = "ban-green";
